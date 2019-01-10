@@ -9,7 +9,6 @@
     "48": "icons/icon48.png",
     "128": "icons/icon128.png"
   },
-  "default_locale": "en",
   "options_page": "src/options/index.html",
   "page_action": {
     "default_icon": "icons/icon19.png",
@@ -22,15 +21,7 @@
   "content_scripts": [
     {
       "matches": [
-        "https://www.google.com/*"
-      ],
-      "css": [
-        "src/inject/inject.css"
-      ]
-    },
-    {
-      "matches": [
-        "https://www.google.com/*"
+        "https://english-bell.com/*"
       ],
       "js": [
         "src/inject/inject.js"
