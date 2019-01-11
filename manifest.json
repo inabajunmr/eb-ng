@@ -21,10 +21,21 @@
   "content_scripts": [
     {
       "matches": [
-        "https://english-bell.com/*"
+        "https://english-bell.com/ja/mypage/lesson_record.html"
       ],
       "js": [
-        "src/inject/inject.js"
+        "src/inject/lesson_record.js"
+      ]
+    },
+    {
+      "matches": [
+        "https://english-bell.com/ja/mypage/lesson_rsv.html"
+      ],
+      "js": [
+        "src/inject/lesson_rsv.js"
+      ],
+      "css": [
+        "src/inject/lesson_rsv.css"
       ]
     }
   ]
