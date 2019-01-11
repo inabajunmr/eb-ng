@@ -1,5 +1,5 @@
 chrome.extension.sendMessage({}, function(response) {
-	var readyStateCheckInterval = setInterval(function() {
+	let readyStateCheckInterval = setInterval(function() {
 	if (document.readyState === "complete") {
 		clearInterval(readyStateCheckInterval);
 
@@ -12,22 +12,25 @@ chrome.extension.sendMessage({}, function(response) {
 	}, 10);
 });
 
+function saveAsNg(e){
+	let name = e.target.getAttribute("name")
+        console.log(name)
+} 
+
 function setNgButton(){
 
-	tds = document.querySelectorAll(".mp_tbl1 tr>td:nth-child(4)")
+	let tds = document.querySelectorAll(".mp_tbl1 tr>td:nth-child(4)")
 
 	tds.forEach((td) => {
-		name = td.textContent
-		var button = document.createElement("input");
+		let name = td.textContent
+		let button = document.createElement("input");
 		button.setAttribute("value", "NG");
 		button.setAttribute("type", "button");
 		button.setAttribute("class", "ng");
 		button.setAttribute("name", name);
 		
-		button.addEventListener('click', function() {
-  
-			console.log('heys');
-		  
+		button.addEventListener('click', function(e) {
+			 saveAsNg(e)
 		}, false);
 		
 
